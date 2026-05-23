@@ -1,0 +1,269 @@
+{
+  "info": {
+    "_postman_id": "9ff9dafe-c0d7-44cf-8eba-6011f383a15c",
+    "name": "Employee",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53842752",
+    "_collection_link": "https://go.postman.co/collection/53842752-9ff9dafe-c0d7-44cf-8eba-6011f383a15c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "createEmployee",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"Sameer\",\r\n    \"lastName\" : \"Ahuja\",\r\n    \"email\" : \"sameer@test.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/employees/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "employeeEmailValidation",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"\",\r\n    \"lastName\" : \"Sakhare\",\r\n    \"email\" : \"aman@\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/employees/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "employeefirstNamelastNameValidation",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"\",\r\n    \"lastName\" : \"\",\r\n    \"email\" : \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/employees/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getEmployeeById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/employees/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getEmployeeById (Not Found)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/employees/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAllEmployee",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateEmployee",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"update\",\r\n    \"lastName\" : \"update\",\r\n    \"email\" : \"update@test.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/employees/1/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "1",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteEmployee",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/employees/5/delete",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "5",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteEmployee (Not Found)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/employees/999/delete",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "999",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateEmployee (Not Found)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"updateFirst\",\r\n    \"lastName\" : \"updateLast\",\r\n    \"email\" : \"update@test.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/employees/999/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees",
+            "999",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
